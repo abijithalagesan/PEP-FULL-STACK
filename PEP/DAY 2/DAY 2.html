@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PEP Workshop</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid #b9b9b9;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #edeaea;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #f3e6e6;
+        }
+
+        .day {
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e5dfdf;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th colspan="4" class="title">PEP Workshop</th>
+    </tr>
+
+    <tr>
+        <th rowspan="2">Day</th>
+        <th colspan="2">Schedule</th>
+        <th rowspan="2">Topic</th>
+    </tr>
+
+    <tr>
+        <th>Begin</th>
+        <th>End</th>
+    </tr>
+
+    <tr>
+        <td rowspan="2" class="day">Friday</td>
+        <td>9:00am</td>
+        <td>1pm</td>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td>2pm</td>
+        <td>5:30pm</td>
+        <td>CSS</td>
+    </tr>
+
+    <tr>
+        <td rowspan="2" class="day">Saturday</td>
+        <td>9:00am</td>
+        <td>1pm</td>
+        <td rowspan="2">JS and React Basics </td>
+    </tr>
+    <tr>
+        <td>2pm</td>
+        <td>5:30pm</td>
+    </tr>
+
+    <tr>
+        <td class="day">Sunday</td>
+        <td>9:00am</td>
+        <td>5:30pm</td>
+        <td>Let's Build Foodie</td>
+    </tr>
+
+</table>
+
+</body>
+</html>

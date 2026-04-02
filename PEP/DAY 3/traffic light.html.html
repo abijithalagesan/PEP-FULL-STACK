@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Light</title>
+    <style>
+
+        body {
+            background: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1{
+            color: white;
+            justify-content: flex-start;
+           
+            
+        }
+
+        .traffic-light {
+            background: black;
+            padding: 20px;
+            border-radius: 20px;
+            width: 100px;
+        }
+
+        .light {
+            width: 60px;
+            height: 60px;
+            margin: 15px auto;
+            border-radius: 50%;
+            background: #333;
+        }
+
+        .red {
+            animation: redLight 6s infinite;
+        }
+
+        .yellow {
+            animation: yellowLight 6s infinite;
+        }
+
+        .green {
+            animation: greenLight 6s infinite;
+        }
+        @keyframes redLight {
+            0%, 33% {
+                background: red;
+                box-shadow: 0 0 20px red;
+            }
+            34%, 100% {
+                background: #333;
+                box-shadow: none;
+            }
+        }
+
+        @keyframes yellowLight {
+            0%, 33% {
+                background: #333;
+                box-shadow: none;
+            }
+            34%, 66% {
+                background: yellow;
+                box-shadow: 0 0 20px yellow;
+            }
+            67%, 100% {
+                background: #333;
+                box-shadow: none;
+            }
+        }
+
+        @keyframes greenLight {
+            0%, 66% {
+                background: #333;
+                box-shadow: none;
+            }
+            67%, 100% {
+                background: lime;
+                box-shadow: 0 0 20px lime;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="traffic-light">
+    <div class="light red"></div>
+    <div class="light yellow"></div>
+    <div class="light green"></div>
+    </div>
+
+</body>
+</html>

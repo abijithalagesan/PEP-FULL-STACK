@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown Timer</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: black;
+      color: lime;
+    }
+    #timer {
+      font-size: 40px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Countdown Timer</h1>
+
+<input type="number" id="daysInput" placeholder="Enter days">
+<button onclick="startCountdown()">Start</button>
+
+<div id="timer"></div>
+
+<script>
+let interval;
+
+function startCountdown() {
+  clearInterval(interval);
+
+  let days = parseInt(document.getElementById("daysInput").value);
+
+  if (isNaN(days) || days <= 0) {
+    document.getElementById("timer").innerText = "Enter valid days!";
+    return;
+  }
+
+  let totalSeconds = days * 24 * 60 * 60;
+
+  interval = setInterval(() => {
+
+    let d = Math.floor(totalSeconds / (24 * 60 * 60));
+    let h = Math.floor((totalSeconds % (24 * 60 * 60)) / 3600);
+    let m = Math.floor((totalSeconds % 3600) / 60);
+    let s = totalSeconds % 60;
+
+    document.getElementById("timer").innerText =
+      d + "d : " + h + "h : " + m + "m : " + s + "s";
+
+    totalSeconds--;
+
+    if (totalSeconds < 0) {
+      clearInterval(interval);
+      document.getElementById("timer").innerText = "Time's up!";
+    }
+
+  }, 1000);
+}
+</script>
+
+</body>
+</html>

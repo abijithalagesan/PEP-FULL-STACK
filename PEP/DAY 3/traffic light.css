@@ -1,0 +1,37 @@
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Traffic light box */
+.traffic-light {
+    width: 100px;
+    background: black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* Common light style */
+.light {
+    width: 60px;
+    height: 60px;
+    margin: 15px auto;
+    border-radius: 50%;
+    background: #444;
+}
+
+/* Individual colors */
+.red {
+    background: red;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.green {
+    background: green;
+}

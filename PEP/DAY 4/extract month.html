@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Month Extractor</title>
+</head>
+<body>
+
+<input type="text" id="dateInput" placeholder="DD-MM-YYYY">
+<button onclick="getMonth()">Get Month</button>
+
+<p id="result"></p>
+
+<script>
+function getMonth() {
+  let input = document.getElementById("dateInput").value;
+
+  let parts = input.split("-");
+  let monthNumber = parseInt(parts[1]);
+
+  let months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+
+  let monthName = months[monthNumber - 1];
+
+  document.getElementById("result").innerText = monthName;
+}
+</script>
+
+</body>
+</html>

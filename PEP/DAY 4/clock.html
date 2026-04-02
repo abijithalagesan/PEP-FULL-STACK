@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dual Clock</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: black;
+      color: lime;
+    }
+    .clock {
+      font-size: 40px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Digital Clock</h1>
+
+<div class="clock">
+  <h2>24-Hour Format</h2>
+  <div id="clock24"></div>
+</div>
+
+<div class="clock">
+  <h2>12-Hour Format</h2>
+  <div id="clock12"></div>
+</div>
+
+<script>
+function showTime() {
+  let now = new Date();
+
+  let h = now.getHours();
+  let m = now.getMinutes();
+  let s = now.getSeconds();
+
+  // 24-hour format
+  let h24 = h < 10 ? "0" + h : h;
+  let m24 = m < 10 ? "0" + m : m;
+  let s24 = s < 10 ? "0" + s : s;
+
+  document.getElementById("clock24").innerText =
+    h24 + ":" + m24 + ":" + s24;
+
+  // 12-hour format
+  let ampm = h >= 12 ? "PM" : "AM";
+  let h12 = h % 12;
+  h12 = h12 === 0 ? 12 : h12;
+
+  let m12 = m < 10 ? "0" + m : m;
+  let s12 = s < 10 ? "0" + s : s;
+
+  document.getElementById("clock12").innerText =
+    h12 + ":" + m12 + ":" + s12 + " " + ampm;
+}
+
+showTime(); // run once
+setInterval(showTime, 1000);
+</script>
+
+</body>
+</html>
